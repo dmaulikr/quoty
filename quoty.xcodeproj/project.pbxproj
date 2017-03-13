@@ -12,6 +12,10 @@
 		58E1BC2D1E77168700BF19F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC2B1E77168700BF19F9 /* Main.storyboard */; };
 		58E1BC2F1E77168700BF19F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC2E1E77168700BF19F9 /* Assets.xcassets */; };
 		58E1BC321E77168700BF19F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC301E77168700BF19F9 /* LaunchScreen.storyboard */; };
+		58E1BC411E771A5400BF19F9 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC3D1E771A5400BF19F9 /* Quicksand-Bold.ttf */; };
+		58E1BC421E771A5400BF19F9 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC3E1E771A5400BF19F9 /* Quicksand-Light.ttf */; };
+		58E1BC431E771A5400BF19F9 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC3F1E771A5400BF19F9 /* Quicksand-Medium.ttf */; };
+		58E1BC441E771A5400BF19F9 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58E1BC401E771A5400BF19F9 /* Quicksand-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		58E1BC2E1E77168700BF19F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58E1BC311E77168700BF19F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58E1BC331E77168700BF19F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58E1BC3D1E771A5400BF19F9 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		58E1BC3E1E771A5400BF19F9 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		58E1BC3F1E771A5400BF19F9 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		58E1BC401E771A5400BF19F9 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		58E1BC3C1E77192A00BF19F9 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				58E1BC3D1E771A5400BF19F9 /* Quicksand-Bold.ttf */,
+				58E1BC3E1E771A5400BF19F9 /* Quicksand-Light.ttf */,
+				58E1BC3F1E771A5400BF19F9 /* Quicksand-Medium.ttf */,
+				58E1BC401E771A5400BF19F9 /* Quicksand-Regular.ttf */,
 				58E1BC2E1E77168700BF19F9 /* Assets.xcassets */,
 				58E1BC331E77168700BF19F9 /* Info.plist */,
 			);
@@ -158,7 +170,11 @@
 			files = (
 				58E1BC321E77168700BF19F9 /* LaunchScreen.storyboard in Resources */,
 				58E1BC2F1E77168700BF19F9 /* Assets.xcassets in Resources */,
+				58E1BC441E771A5400BF19F9 /* Quicksand-Regular.ttf in Resources */,
 				58E1BC2D1E77168700BF19F9 /* Main.storyboard in Resources */,
+				58E1BC411E771A5400BF19F9 /* Quicksand-Bold.ttf in Resources */,
+				58E1BC421E771A5400BF19F9 /* Quicksand-Light.ttf in Resources */,
+				58E1BC431E771A5400BF19F9 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
