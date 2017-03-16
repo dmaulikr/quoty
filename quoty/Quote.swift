@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct quote {
+struct Quote {
     
     let author: String
     let text: String
