@@ -15,7 +15,7 @@ class QuoteResource {
     
     // MARK: Download data
     
-    func downloadData(completion: @escaping (_ response: Quote) -> ()) {
+    func fetchData(completion: @escaping (_ response: Quote) -> ()) {
         
         let queue = DispatchQueue.global(qos: .background)
         let session = URLSession(configuration: URLSessionConfiguration.default)
