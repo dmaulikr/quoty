@@ -10,7 +10,8 @@ import Foundation
 
 class QuoteResource {
     
-    let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?"
+    //let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?"
+    let urlText: String = "http://quotesondesign.com/wp-json/posts?"
     
     
     // MARK: Download data
@@ -34,7 +35,7 @@ class QuoteResource {
                 }
                 
                 guard let data = data,
-                    let apiResponse = self.createResponse(fromData: data) else {
+                      let apiResponse = self.createResponse(fromData: data) else {
                         print("no data?")
                         return
                 }
@@ -69,9 +70,9 @@ class QuoteResource {
     }
     
     
-    private func parseJson(data: Data) -> NSDictionary? {
+    private func parseJson(data: Data) -> NSArray? {
         do {
-            let jsonDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+            let jsonDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSArray
             return jsonDict
         } catch {
             print(error.localizedDescription)
