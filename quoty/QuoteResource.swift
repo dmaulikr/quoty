@@ -65,13 +65,13 @@ class QuoteResource {
     
     private func createResponse(fromData: Data) -> Quote? {
         
-        guard let jsonDict = parseJson(data: fromData) else {
+        guard let jsonArr = parseJson(data: fromData) else {
             print("problem with json parsing")
             return nil
         }
         
         // TODO: read out the data from json
-        print(jsonDict)
+        print(jsonArr)
         
         //build response
         let response = Quote(author: "", text: "")
@@ -82,8 +82,8 @@ class QuoteResource {
     
     private func parseJson(data: Data) -> NSArray? {
         do {
-            let jsonDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSArray
-            return jsonDict
+            let jsonArr = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSArray
+            return jsonArr
         } catch {
             print(error.localizedDescription)
             return nil
