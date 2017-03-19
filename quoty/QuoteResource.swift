@@ -71,19 +71,20 @@ class QuoteResource {
             return nil
         }
         
-        // TODO: read out the data from json
+        //read out the json
         let jsonDict = jsonArr[0] as! [String: Any]
         
         let author = jsonDict["title"] as! String
-        let text = jsonDict["content"] as! String
+        let text = processQuoteText(withText: jsonDict["content"] as! String)
         
+        //
         print(author)
         print(text)
         
         
         
         //build response
-        let response = Quote(author: "", text: "")
+        let response = Quote(author: author, text: text)
         return response
         
     }
@@ -97,5 +98,17 @@ class QuoteResource {
             print(error.localizedDescription)
             return nil
         }
+    }
+    
+    
+    private func processQuoteText(withText: String) -> String {
+        let startIndex = withText.index(withText.startIndex, offsetBy: 3)
+        let endIndex = withText.index(withText.endIndex, offsetBy: -5)
+        
+        let range = startIndex..<endIndex
+        
+        let result = withText.substring(with: range)
+        
+        return result
     }
 }
