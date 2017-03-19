@@ -10,9 +10,18 @@ import Foundation
 
 class QuoteResource {
     
+    //old api
     //let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?"
-    // TODO: getURL function. Modular
-    let urlText: String = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
+    
+    //
+    func getUrlString() -> String {
+        
+        let urlBase = "quotesondesign.com"
+        let urlSub = "wp-json/posts"
+        let urlConfig = "filter[orderby]=rand&filter[posts_per_page]=1"
+        
+        return "http://\(urlBase)/\(urlSub)?\(urlConfig)"
+    }
     
     
     // MARK: Download data
@@ -24,7 +33,7 @@ class QuoteResource {
         
         //async download
         queue.async {
-            guard let urlObj = URL(string: self.urlText) else {
+            guard let urlObj = URL(string: self.getUrlString()) else {
                 print("problem while creating url object")
                 return
             }
