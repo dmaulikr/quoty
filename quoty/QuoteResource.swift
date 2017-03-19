@@ -15,10 +15,11 @@ class QuoteResource {
     
     //
     func getUrlString() -> String {
+        //let url = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
         
         let urlBase = "quotesondesign.com"
         let urlSub = "wp-json/posts"
-        let urlConfig = "filter[orderby]=rand&filter[posts_per_page]=1"
+        let urlConfig = "filter[orderby]=rand"
         
         return "http://\(urlBase)/\(urlSub)?\(urlConfig)"
     }
@@ -71,7 +72,15 @@ class QuoteResource {
         }
         
         // TODO: read out the data from json
-        print(jsonArr)
+        let jsonDict = jsonArr[0] as! [String: Any]
+        
+        let author = jsonDict["title"] as! String
+        let text = jsonDict["content"] as! String
+        
+        print(author)
+        print(text)
+        
+        
         
         //build response
         let response = Quote(author: "", text: "")
