@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newButtonTapped(_ sender: Any) {
+        let resource = QuoteResource()
+        resource.fetchData { (response) in
+            // write data in view
+            self.quoteTextLabel.text = response.text
+            self.authorLabel.text = "- \(response.author)"
+        }
     }
     
     
