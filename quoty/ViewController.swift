@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         
         let resource = QuoteResource()
         resource.fetchData { (response) in
-            // TODO: write data in view
+            // write data in view
+            self.quoteTextLabel.text = response.text
+            self.authorLabel.text = "- \(response.author)"
         }
     }
 
