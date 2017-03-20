@@ -70,6 +70,9 @@
                                         <state key="normal" title="new quote">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="newButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMu-CZ-JEH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-tk-iqx">
                                         <rect key="frame" x="8" y="278" width="72" height="34"/>
@@ -81,6 +84,9 @@
                                         <state key="normal" title="tweet">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tweetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9AX-pO-QkH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,6 +115,13 @@
                             <constraint firstItem="NzN-Bv-ZMA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="rBT-Lo-clw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="ZaX-AB-wuU" id="Opl-pO-eGo"/>
+                        <outlet property="innerView" destination="udR-c4-RoM" id="S8n-bz-4yZ"/>
+                        <outlet property="newButton" destination="UKX-32-pK1" id="xGb-Qi-Fyx"/>
+                        <outlet property="quoteTextLabel" destination="vpF-fD-YZz" id="trb-Yv-Pyn"/>
+                        <outlet property="tweetButton" destination="4VZ-tk-iqx" id="NpD-xG-Nn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

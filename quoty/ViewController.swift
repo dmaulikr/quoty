@@ -10,6 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var innerView: UIView!
+    
+    @IBOutlet weak var quoteTextLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    
+    @IBOutlet weak var tweetButton: UIButton!
+    @IBOutlet weak var newButton: UIButton!
+    
+    @IBAction func tweetButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func newButtonTapped(_ sender: Any) {
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
