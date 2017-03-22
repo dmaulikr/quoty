@@ -71,11 +71,8 @@ class QuoteResource {
             return nil
         }
         
-        //read out the json
-        //let jsonDict = jsonArr[0] as! [String: Any]
-        
         let author = jsonDict["quoteAuthor"] as! String
-        //let text = processQuoteText(withText: jsonDict["content"] as! String)
+        //TODO: Catch the case if the author is null
         let text = jsonDict["quoteText"] as! String
         
         //
@@ -102,6 +99,7 @@ class QuoteResource {
     }
     
     
+    //method not needed with the current api
     private func processQuoteText(withText: String) -> String {
         let startIndex = withText.index(withText.startIndex, offsetBy: 3)
         let endIndex = withText.index(withText.endIndex, offsetBy: -5)
