@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var newButton: UIButton!
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
+        //TODO: Add tweet function
     }
     
     @IBAction func newButtonTapped(_ sender: Any) {
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
             self.quoteTextLabel.text = response.text
             self.authorLabel.text = "- \(response.author)"
         }
+        
+        //TODO: Add the color change
     }
     
     
