@@ -11,17 +11,18 @@ import Foundation
 class QuoteResource {
     
     //old api
-    //let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?"
+    //let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
     
     //
     func getUrlString() -> String {
         //let url = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
         
-        let urlBase = "quotesondesign.com"
-        let urlSub = "wp-json/posts"
-        let urlConfig = "filter[orderby]=rand"
+        //let urlBase = "quotesondesign.com"
+        //let urlSub = "wp-json/posts"
+        //let urlConfig = "filter[orderby]=rand"
         
-        return "http://\(urlBase)/\(urlSub)?\(urlConfig)"
+        //return "http://\(urlBase)/\(urlSub)?\(urlConfig)"
+        return "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
     }
     
     
@@ -66,16 +67,17 @@ class QuoteResource {
     
     private func createResponse(fromData: Data) -> Quote? {
         
-        guard let jsonArr = parseJson(data: fromData) else {
+        guard let jsonDict = parseJson(data: fromData) else {
             print("problem with json parsing")
             return nil
         }
         
         //read out the json
-        let jsonDict = jsonArr[0] as! [String: Any]
+        //let jsonDict = jsonArr[0] as! [String: Any]
         
-        let author = jsonDict["title"] as! String
-        let text = processQuoteText(withText: jsonDict["content"] as! String)
+        let author = jsonDict["quoteAuthor"] as! String
+        //let text = processQuoteText(withText: jsonDict["content"] as! String)
+        let text = jsonDict["quoteText"] as! String
         
         //
         print(author)
@@ -90,10 +92,10 @@ class QuoteResource {
     }
     
     
-    private func parseJson(data: Data) -> NSArray? {
+    private func parseJson(data: Data) -> NSDictionary? {
         do {
-            let jsonArr = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSArray
-            return jsonArr
+            let jsonDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+            return jsonDict
         } catch {
             print(error.localizedDescription)
             return nil
