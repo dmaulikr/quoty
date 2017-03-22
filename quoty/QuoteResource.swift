@@ -72,7 +72,6 @@ class QuoteResource {
         }
         
         let author = jsonDict["quoteAuthor"] as! String
-        //TODO: Catch the case if the author is null
         let text = jsonDict["quoteText"] as! String
         
         //

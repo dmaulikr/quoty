@@ -27,6 +27,9 @@ class ViewController: UIViewController {
             // write data in view
             self.quoteTextLabel.text = response.text
             self.authorLabel.text = "- \(response.author)"
+            
+            self.quoteTextLabel.isHidden = false
+            self.authorLabel.isHidden = false
         }
     }
     
