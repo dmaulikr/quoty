@@ -11,18 +11,17 @@ import Foundation
 class QuoteResource {
     
     //old api
-    //let urlText: String = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
-    
+    //let url = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
     //
+    
     func getUrlString() -> String {
-        //let url = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
+        //let url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
         
-        //let urlBase = "quotesondesign.com"
-        //let urlSub = "wp-json/posts"
-        //let urlConfig = "filter[orderby]=rand"
+        let urlBase = "api.forismatic.com"
+        let urlSub = "api/1.0"
+        let urlConfig = "method=getQuote&key=457653&format=json&lang=en"
         
-        //return "http://\(urlBase)/\(urlSub)?\(urlConfig)"
-        return "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
+        return "http://\(urlBase)/\(urlSub)/?\(urlConfig)"
     }
     
     
