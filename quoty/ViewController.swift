@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
@@ -19,7 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var newButton: UIButton!
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
-        //TODO: Add tweet function
+        if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)) {
+            let socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            self.present(socialController!, animated: true, completion: nil)
+        }
     }
     
     @IBAction func newButtonTapped(_ sender: Any) {
