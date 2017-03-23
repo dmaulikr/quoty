@@ -22,9 +22,11 @@ class ViewController: UIViewController {
     @IBAction func tweetButtonTapped(_ sender: Any) {
         if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)) {
             let socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            //TODO: Add initial text (quote)
             
             self.present(socialController!, animated: true, completion: nil)
-        }
+            //TODO: give feedback for actions
+        } //TODO: Else case --> open web
     }
     
     @IBAction func newButtonTapped(_ sender: Any) {
