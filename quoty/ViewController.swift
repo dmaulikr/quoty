@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBAction func tweetButtonTapped(_ sender: Any) {
         if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)) {
             let socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            //TODO: Add initial text (quote)
+            socialController?.setInitialText("#quotyapp \n\(quoteTextLabel.text!) \(authorLabel.text!)")
             
             self.present(socialController!, animated: true, completion: nil)
             //TODO: give feedback for actions
