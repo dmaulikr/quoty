@@ -22,11 +22,21 @@ class ViewController: UIViewController {
     @IBAction func tweetButtonTapped(_ sender: Any) {
         if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)) {
             let socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            socialController?.setInitialText("#quotyapp \n\(quoteTextLabel.text!) \(authorLabel.text!)")
+            socialController?.setInitialText("#quotyapp \n\(quoteTextLabel.text!) \n\(authorLabel.text!)")
             
             self.present(socialController!, animated: true, completion: nil)
             //TODO: give feedback for actions
-        } //TODO: Else case --> open web
+        } else /*open web*/{
+            let tweetText = "#quotyapp \n\(quoteTextLabel.text!) \n\(authorLabel.text!)"
+            let shareString = "https://twitter.com/intent/tweet?text=\(tweetText)"
+            // encode a space to %20 for example
+            let escapedShareString = shareString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            // cast to an url
+            let url = URL(string: escapedShareString)
+            
+            // open in safari
+            UIApplication.shared.openURL(url!)
+        }
     }
     
     @IBAction func newButtonTapped(_ sender: Any) {
