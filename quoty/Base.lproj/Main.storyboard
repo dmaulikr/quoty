@@ -117,9 +117,8 @@
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="ZaX-AB-wuU" id="Opl-pO-eGo"/>
-                        <outlet property="innerView" destination="udR-c4-RoM" id="S8n-bz-4yZ"/>
                         <outlet property="newButton" destination="UKX-32-pK1" id="xGb-Qi-Fyx"/>
-                        <outlet property="quoteTextLabel" destination="vpF-fD-YZz" id="trb-Yv-Pyn"/>
+                        <outlet property="quoteTextLabel" destination="vpF-fD-YZz" id="R6K-k1-Dpv"/>
                         <outlet property="tweetButton" destination="4VZ-tk-iqx" id="NpD-xG-Nn9"/>
                     </connections>
                 </viewController>

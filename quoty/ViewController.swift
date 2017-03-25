@@ -10,8 +10,6 @@ import UIKit
 import Social
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var innerView: UIView!
     
     @IBOutlet weak var quoteTextLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -48,6 +46,22 @@ class ViewController: UIViewController {
         }
         
         //TODO: Add the color change
+        let color = randomColor()
+        print(color)
+    }
+    
+    
+    
+    //
+    private func randomColor() -> UIColor {
+        
+        let randomRed:CGFloat = CGFloat(drand48())
+        
+        let randomGreen:CGFloat = CGFloat(drand48())
+        
+        let randomBlue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
     
     
@@ -68,4 +82,5 @@ class ViewController: UIViewController {
 
     
 }
+
 
