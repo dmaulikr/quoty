@@ -45,9 +45,14 @@ class ViewController: UIViewController {
             self.authorLabel.text = "- \(response.author)"
         }
         
-        //TODO: Add the color change
+        //add color transition
         let color = randomColor()
-        print(color)
+        
+        UIView.animate(withDuration: 2.0) { 
+            self.view.backgroundColor = color
+            self.tweetButton.backgroundColor = color
+            self.newButton.backgroundColor = color
+        }
     }
     
     
