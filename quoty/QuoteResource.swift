@@ -74,9 +74,9 @@ class QuoteResource {
         let author = jsonDict["quoteAuthor"] as! String
         let text = jsonDict["quoteText"] as! String
         
-        //
-        print(author)
-        print(text)
+        //debugging
+        //print(author)
+        //print(text)
         
         
         
